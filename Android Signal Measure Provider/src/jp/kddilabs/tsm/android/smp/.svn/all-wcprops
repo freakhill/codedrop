@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/wsmp/!svn/ver/133/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp
+END
+Prefs.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/wsmp/!svn/ver/115/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/Prefs.java
+END
+MainActivityDataReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/wsmp/!svn/ver/130/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/MainActivityDataReceiver.java
+END
+AsmpServiceConnection.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/wsmp/!svn/ver/54/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/AsmpServiceConnection.java
+END
+MainActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/wsmp/!svn/ver/126/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/MainActivity.java
+END
+TriggerControl.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/wsmp/!svn/ver/130/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/TriggerControl.java
+END
+TriggerToaster.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/wsmp/!svn/ver/130/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/TriggerToaster.java
+END
+IntentGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/wsmp/!svn/ver/90/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/IntentGenerator.java
+END
+VisualizeActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/wsmp/!svn/ver/81/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/VisualizeActivity.java
+END
+CdmaWifiTriggerToaster.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/wsmp/!svn/ver/130/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/CdmaWifiTriggerToaster.java
+END
+SettingsActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/wsmp/!svn/ver/58/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/SettingsActivity.java
+END

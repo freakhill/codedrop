@@ -1,0 +1,15 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 19
+/svn/wsmp/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/wsmp/!svn/ver/137/trunk/WiFi%20signal%20measure%20provider
+END
+launch_iperf_server.bat
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wsmp/!svn/ver/36/trunk/WiFi%20signal%20measure%20provider/launch_iperf_server.bat
+END

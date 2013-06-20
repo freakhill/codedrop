@@ -1,0 +1,75 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 19
+/svn/wsmp/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wsmp/!svn/ver/138/trunk/ASMP%20data%20aggregator/src/kddi/asmp/agg
+END
+CoordsAsStat.py
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wsmp/!svn/ver/129/trunk/ASMP%20data%20aggregator/src/kddi/asmp/agg/CoordsAsStat.py
+END
+QuadTree.py
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/wsmp/!svn/ver/138/trunk/ASMP%20data%20aggregator/src/kddi/asmp/agg/QuadTree.py
+END
+test.n3d
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/wsmp/!svn/ver/128/trunk/ASMP%20data%20aggregator/src/kddi/asmp/agg/test.n3d
+END
+LightweightSVG.py
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/wsmp/!svn/ver/129/trunk/ASMP%20data%20aggregator/src/kddi/asmp/agg/LightweightSVG.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/wsmp/!svn/ver/127/trunk/ASMP%20data%20aggregator/src/kddi/asmp/agg/__init__.py
+END
+QueryManager.py
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wsmp/!svn/ver/128/trunk/ASMP%20data%20aggregator/src/kddi/asmp/agg/QueryManager.py
+END
+RSSI.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wsmp/!svn/ver/129/trunk/ASMP%20data%20aggregator/src/kddi/asmp/agg/RSSI.py
+END
+AggMeasure.py
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wsmp/!svn/ver/129/trunk/ASMP%20data%20aggregator/src/kddi/asmp/agg/AggMeasure.py
+END
+NumMeasures.py
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wsmp/!svn/ver/129/trunk/ASMP%20data%20aggregator/src/kddi/asmp/agg/NumMeasures.py
+END
+test.svg
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/wsmp/!svn/ver/128/trunk/ASMP%20data%20aggregator/src/kddi/asmp/agg/test.svg
+END
+RSSI_GroupByCid.py
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/wsmp/!svn/ver/129/trunk/ASMP%20data%20aggregator/src/kddi/asmp/agg/RSSI_GroupByCid.py
+END

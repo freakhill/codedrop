@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/wsmp/!svn/ver/133/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/measures
+END
+WiFi_Measure.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/wsmp/!svn/ver/132/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/measures/WiFi_Measure.java
+END
+AsmpMeasure.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/wsmp/!svn/ver/126/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/measures/AsmpMeasure.java
+END
+GPS_Measure.aidl
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/wsmp/!svn/ver/53/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/measures/GPS_Measure.aidl
+END
+Battery_Measure.aidl
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/wsmp/!svn/ver/133/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/measures/Battery_Measure.aidl
+END
+CDMA_Measure.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/wsmp/!svn/ver/126/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/measures/CDMA_Measure.java
+END
+WiFi_Measure.aidl
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/wsmp/!svn/ver/53/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/measures/WiFi_Measure.aidl
+END
+GPS_Measure.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/wsmp/!svn/ver/126/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/measures/GPS_Measure.java
+END
+Battery_Measure.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/wsmp/!svn/ver/133/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/measures/Battery_Measure.java
+END
+CDMA_Measure.aidl
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/wsmp/!svn/ver/53/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/measures/CDMA_Measure.aidl
+END

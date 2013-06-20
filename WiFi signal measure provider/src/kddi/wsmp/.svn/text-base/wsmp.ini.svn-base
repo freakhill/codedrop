@@ -1,0 +1,21 @@
+[executables]
+iperf = C:\Program Files\iperf-2.0.2\bin\iperf.exe
+
+[apc]
+server_port = 5001
+server_ip = 127.0.0.1
+
+[signal]
+throughput_bg_color = #000000
+throughput_x_window = 32
+server_ip = 127.0.0.1
+server_port = 5001
+
+[last_values]
+throughput = 517.21
+rssi = 0
+
+[database]
+login = root
+address = localhost:3306
+

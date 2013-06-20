@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/wsmp/!svn/ver/133/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/providers
+END
+Battery_CSV_Provider.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/wsmp/!svn/ver/133/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/providers/Battery_CSV_Provider.java
+END
+WiFi_CSV_Provider.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/wsmp/!svn/ver/126/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/providers/WiFi_CSV_Provider.java
+END
+AsmpCSVProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/wsmp/!svn/ver/132/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/providers/AsmpCSVProvider.java
+END
+CDMA_CSV_Provider.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/wsmp/!svn/ver/126/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/providers/CDMA_CSV_Provider.java
+END
+DummyCursor.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/wsmp/!svn/ver/54/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/providers/DummyCursor.java
+END
+GPS_CSV_Provider.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/wsmp/!svn/ver/126/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/providers/GPS_CSV_Provider.java
+END

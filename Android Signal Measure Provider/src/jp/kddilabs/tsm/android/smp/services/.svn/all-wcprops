@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/wsmp/!svn/ver/133/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/services
+END
+AsmpService.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/wsmp/!svn/ver/118/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/services/AsmpService.java
+END
+GPS_ServiceInterface.aidl
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/wsmp/!svn/ver/53/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/services/GPS_ServiceInterface.aidl
+END
+Battery_ServiceInterface.aidl
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/wsmp/!svn/ver/133/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/services/Battery_ServiceInterface.aidl
+END
+CDMA_ServiceConfigInterface.aidl
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/wsmp/!svn/ver/58/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/services/CDMA_ServiceConfigInterface.aidl
+END
+CDMA_Service.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/wsmp/!svn/ver/126/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/services/CDMA_Service.java
+END
+WiFi_ServiceInterface.aidl
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/wsmp/!svn/ver/53/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/services/WiFi_ServiceInterface.aidl
+END
+GPS_ServiceConfigInterface.aidl
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/wsmp/!svn/ver/58/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/services/GPS_ServiceConfigInterface.aidl
+END
+Battery_ServiceConfigInterface.aidl
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/wsmp/!svn/ver/133/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/services/Battery_ServiceConfigInterface.aidl
+END
+GPS_Service.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/wsmp/!svn/ver/126/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/services/GPS_Service.java
+END
+Battery_Service.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/wsmp/!svn/ver/133/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/services/Battery_Service.java
+END
+CDMA_ServiceInterface.aidl
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/wsmp/!svn/ver/53/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/services/CDMA_ServiceInterface.aidl
+END
+WiFi_ServiceConfigInterface.aidl
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/wsmp/!svn/ver/58/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/services/WiFi_ServiceConfigInterface.aidl
+END
+WiFi_Service.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/wsmp/!svn/ver/126/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/services/WiFi_Service.java
+END

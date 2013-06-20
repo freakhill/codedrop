@@ -1,0 +1,37 @@
+Fields
+
+Table AccessPoint
+---------------
+id:SERIAL DEFAULT VALUE <- 32b
+model:TINYTEXT CHARACTER SET utf8 <- key1 *less than 255 bytes plz... care the multibytes chars (should be like 128 kanjis)
+sn:TINYTEXT CHARACTER SET utf8 <- key2
+ssid:TINYTEXT(32) CHARACTER SET utf8 <- key3 *regulation, change the SSID if we change the AP config
+
+Table ClientInterface
+---------------
+id:SERIAL DEFAULT VALUE <- 32b
+model:TINYTEXT CHARACTER SET utf8<- key1 *less than 255 bytes plz... care the multibytes chars (should be like 128 kanjis)
+mac_address:TINYTEXT(24) CHARACTER SET utf8<- key2 *TINYTEXT(17) is enough to support the most verbose repr
+
+Table Position
+---------------
+id:SERIAL DEFAULT VALUE <- autoincrement
+latitude:DOUBLE <- key1
+longitude:DOUBLE <- key2
+height:DOUBLE <- key3
+
+Table Measures
+---------------
+AccessPoint::id - ap_id <- key1
+Position::id - ap_pos <- key2
+Client::id - client_id <- key3
+Position::id - client_pos <- key4
+date:TIMESTAMP <- key5
+date_ms:UNSIGNED MEDIUMINT <- key6 unsigned 24b, is enough to hold max ms value 1000000
+exp_tag:TINYTEXT CHARACTER SET utf8 <- key7 *less than 255 bytes plz... care the multibytes chars (should be like 128 kanjis)
+cqi:
+cinr:
+rssi:UNSIGNED TINYINT *receive signal strength indicator
+delay:
+throughput:
+remarks:TEXT CHARACTER SET utf8 <- upto 65536 bytes, we got free space there!

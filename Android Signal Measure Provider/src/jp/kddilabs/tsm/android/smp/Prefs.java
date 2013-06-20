@@ -1,0 +1,150 @@
+package jp.kddilabs.tsm.android.smp;
+
+import android.content.SharedPreferences;
+
+public class Prefs {
+
+	private static SharedPreferences sp;
+
+	// the next value has pure commentative value, but i didn't put it
+	// as value so you can think about READING it and EDITING it when
+	// judged necessary (adding new preference fields to reflect)
+	@SuppressWarnings("unused")
+	private final static int current_max_id = 16;
+
+	// -- android don't like enums because they are said to be badly inlined
+	// -- and to eat memory according to google docs on dec 2009
+	// ------------------------------------------------------------------------
+	public final static String RECORD_CDMA = "record_cdma";
+	public final static String RECORD_WIFI = "record_wifi";
+	public final static String RECORD_LOCATION = "record_location";
+	public final static String RECORD_BATTERY = "record_battery";
+
+	public final static boolean RECORD_CDMA_DEFAULT = true;
+	public final static boolean RECORD_WIFI_DEFAULT = true;
+	public final static boolean RECORD_LOCATION_DEFAULT = true;
+	public final static boolean RECORD_BATTERY_DEFAULT = true;
+
+	public final static int RECORD_CDMA_ID = 0;
+	public final static int RECORD_WIFI_ID = 1;
+	public final static int RECORD_LOCATION_ID = 2;
+	public final static int RECORD_BATTERY_ID = 14;
+	// ------------------------------------------------------------------------
+	public final static String PERIOD_CDMA = "period_cdma";
+	public final static String PERIOD_WIFI = "period_wifi";
+	public final static String PERIOD_LOCATION = "period_location";
+
+	public final static String PERIOD_CDMA_DEFAULT = "250";
+	public final static String PERIOD_WIFI_DEFAULT = "1000";
+	public final static String PERIOD_LOCATION_DEFAULT = "1000";
+
+	public final static int PERIOD_CDMA_ID = 3;
+	public final static int PERIOD_WIFI_ID = 4;
+	public final static int PERIOD_LOCATION_ID = 15;
+	// ------------------------------------------------------------------------
+	public final static String VISUALIZE_SPOTPERIOD = "visualize_spotperiod";
+	public final static String VISUALIZE_MAXSPOTS = "visualize_maxspots";
+	public final static String VISUALIZE_LEVELALPHA = "visualize_levelalpha";
+	public final static String VISUALIZE_SPOTALPHA = "visualize_spotalpha";
+	public final static String VISUALIZE_CELLIDTEXTSIZE = "visualize_cellidtextsize";
+	public final static String VISUALIZE_MINMEDMAXTEXTSIZE = "visualize_minmedmaxtextsize";
+
+	public final static String VISUALIZE_SPOTPERIOD_DEFAULT = "500";
+	public final static String VISUALIZE_MAXSPOTS_DEFAULT = "200000";
+	public final static String VISUALIZE_LEVELALPHA_DEFAULT = "50";
+	public final static String VISUALIZE_SPOTALPHA_DEFAULT = "50";
+	public final static String VISUALIZE_CELLIDTEXTSIZE_DEFAULT = "1";
+	public final static String VISUALIZE_MINMEDMAXTEXTSIZE_DEFAULT = "111";
+
+	public final static int VISUALIZE_SPOTPERIOD_ID = 5;
+	public final static int VISUALIZE_MAXSPOTS_ID = 6;
+	public final static int VISUALIZE_LEVELALPHA_ID = 7;
+	public final static int VISUALIZE_SPOTALPHA_ID = 8;
+	public final static int VISUALIZE_CELLIDTEXTSIZE_ID = 9;
+	public final static int VISUALIZE_MINMEDMAXTEXTSIZE_ID = 10;
+	// ------------------------------------------------------------------------
+	public final static String FORMAT_CDMA = "format_cdma";
+	public final static String FORMAT_WIFI = "format_wifi";
+	public final static String FORMAT_LOCATION = "format_location";
+
+	public final static String FORMAT_CDMA_DEFAULT = "CSV";
+	public final static String FORMAT_WIFI_DEFAULT = "CSV";
+	public final static String FORMAT_LOCATION_DEFAULT = "CSV";
+
+	public final static int FORMAT_CDMA_ID = 11;
+	public final static int FORMAT_WIFI_ID = 12;
+	public final static int FORMAT_LOCATION_ID = 13;
+	// ------------------------------------------------------------------------
+	public final static String PROVIDER_LOCATION = "provider_location";
+	public final static String PROVIDER_LOCATION_DEFAULT = "gps";
+	public final static int PROVIDER_LOCATION_ID = 16;
+
+	// ------------------------------------------------------------------------
+
+	public static void setSharedPreferences(final SharedPreferences sp) {
+		Prefs.sp = sp;
+	}
+
+	// here are following big switch arrays!
+	// it's not the fastest way, not the simplest one, not the more
+	// concise nor the most verbose.
+	// so why? good enough performance and easy to understand, that's why!
+	public static int getInt(final int id) {
+		switch (id) {
+		case PERIOD_CDMA_ID:
+			return new Integer(sp.getString(PERIOD_CDMA, PERIOD_CDMA_DEFAULT));
+		case PERIOD_WIFI_ID:
+			return new Integer(sp.getString(PERIOD_WIFI, PERIOD_WIFI_DEFAULT));
+		case PERIOD_LOCATION_ID:
+			return new Integer(sp.getString(PERIOD_LOCATION,
+					PERIOD_LOCATION_DEFAULT));
+		case VISUALIZE_SPOTPERIOD_ID:
+			return new Integer(sp.getString(VISUALIZE_SPOTPERIOD,
+					VISUALIZE_SPOTPERIOD_DEFAULT));
+		case VISUALIZE_MAXSPOTS_ID:
+			return new Integer(sp.getString(VISUALIZE_MAXSPOTS,
+					VISUALIZE_MAXSPOTS_DEFAULT));
+		case VISUALIZE_LEVELALPHA_ID:
+			return new Integer(sp.getString(VISUALIZE_LEVELALPHA,
+					VISUALIZE_LEVELALPHA_DEFAULT));
+		case VISUALIZE_SPOTALPHA_ID:
+			return new Integer(sp.getString(VISUALIZE_SPOTALPHA,
+					VISUALIZE_SPOTALPHA_DEFAULT));
+		case VISUALIZE_CELLIDTEXTSIZE_ID:
+			return new Integer(sp.getString(VISUALIZE_CELLIDTEXTSIZE,
+					VISUALIZE_CELLIDTEXTSIZE_DEFAULT));
+		}
+		return -1;
+	}
+
+	public static boolean getBoolean(final int id) {
+		switch (id) {
+		case RECORD_CDMA_ID:
+			return sp.getBoolean(RECORD_CDMA, RECORD_CDMA_DEFAULT);
+		case RECORD_WIFI_ID:
+			return sp.getBoolean(RECORD_WIFI, RECORD_WIFI_DEFAULT);
+		case RECORD_LOCATION_ID:
+			return sp.getBoolean(RECORD_LOCATION, RECORD_LOCATION_DEFAULT);
+		case RECORD_BATTERY_ID:
+			return sp.getBoolean(RECORD_BATTERY, RECORD_BATTERY_DEFAULT);
+		}
+		return false;
+	}
+
+	public static String getString(final int id) {
+		switch (id) {
+		case VISUALIZE_MINMEDMAXTEXTSIZE_ID:
+			return sp.getString(VISUALIZE_MINMEDMAXTEXTSIZE,
+					VISUALIZE_MINMEDMAXTEXTSIZE_DEFAULT);
+		case FORMAT_CDMA_ID:
+			return sp.getString(FORMAT_CDMA, FORMAT_CDMA_DEFAULT);
+		case FORMAT_WIFI_ID:
+			return sp.getString(FORMAT_WIFI, FORMAT_WIFI_DEFAULT);
+		case FORMAT_LOCATION_ID:
+			return sp.getString(FORMAT_LOCATION, FORMAT_LOCATION_DEFAULT);
+		case PROVIDER_LOCATION_ID:
+			return sp.getString(PROVIDER_LOCATION, PROVIDER_LOCATION_DEFAULT);
+		}
+		return null;
+	}
+}

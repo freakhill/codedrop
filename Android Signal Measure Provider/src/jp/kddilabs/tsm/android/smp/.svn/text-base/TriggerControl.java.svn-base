@@ -1,0 +1,5 @@
+package jp.kddilabs.tsm.android.smp;
+
+public interface TriggerControl {
+	public void addTrigger(TriggerToaster t);
+}

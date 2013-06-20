@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@android:id/tabhost" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<TabWidget android:id="@android:id/tabs"
+			android:layout_width="fill_parent" android:layout_height="wrap_content" />
+		<FrameLayout android:id="@android:id/tabcontent"
+			android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<TableLayout android:id="@+id/cdmalayout"
+				android:layout_width="fill_parent" android:layout_height="fill_parent"
+				android:stretchColumns="1">
+				<TableRow>
+                    <TextView android:text="Phone Type" android:layout_column="1"
+                        android:padding="3dip" />
+                    <TextView android:text="0" android:gravity="right"
+                        android:padding="3dip" android:id="@+cdma/phonetype" />
+                </TableRow>
+				<TableRow>
+					<TextView android:text="CID" android:layout_column="1"
+						android:padding="3dip" />
+					<TextView android:text="0" android:gravity="right"
+						android:padding="3dip" android:id="@+cdma/cid" />
+				</TableRow>
+				<TableRow>
+					<TextView android:text="LAC" android:layout_column="1"
+						android:padding="3dip" />
+					<TextView android:text="0" android:gravity="right"
+						android:padding="3dip" android:id="@+cdma/lac" />
+				</TableRow>
+				<TableRow>
+					<TextView android:text="RNC" android:layout_column="1"
+						android:padding="3dip" />
+					<TextView android:text="0" android:gravity="right"
+						android:padding="3dip" android:id="@+cdma/rnc" />
+				</TableRow>
+				<TableRow>
+					<TextView android:text="RSSI" android:layout_column="1"
+						android:padding="3dip" />
+					<TextView android:text="-99 dBm" android:gravity="right"
+						android:padding="3dip" android:id="@+cdma/rxl" />
+				</TableRow>
+				<TableRow>
+                    <TextView android:text="CDMA Ec/Io" android:layout_column="1"
+                        android:padding="3dip" />
+                    <TextView android:text="-99 dBm" android:gravity="right"
+                        android:padding="3dip" android:id="@+cdma/cdma_ecio" />
+                </TableRow>
+				<View android:layout_height="2dip" android:background="#FF909090" />
+				<TableRow>
+					<TextView android:text="Neighbours (CID/RXL)"
+						android:layout_column="1" android:padding="3dip" />
+					<TextView android:text="(0 detected)" android:gravity="right"
+						android:padding="3dip" android:id="@+cdma/neighbours_number" />
+				</TableRow>
+				<View android:layout_height="1dip" android:background="#FF909090" />
+				<TableRow>
+					<TextView android:text="" android:id="@+cdma/neighbours_cid"
+						android:layout_column="1" android:padding="3dip" />
+					<TextView android:text="" android:gravity="right"
+						android:padding="3dip" android:id="@+cdma/neighbours_rxl" />
+				</TableRow>
+			</TableLayout>
+			<TableLayout android:id="@+id/wifilayout"
+				android:layout_width="fill_parent" android:layout_height="fill_parent"
+				android:stretchColumns="1">
+				<TableRow>
+					<TextView android:text="Last scan duration"
+						android:layout_column="1" android:padding="3dip" />
+					<TextView android:text="0" android:gravity="right"
+						android:padding="3dip" android:id="@+wifi/dur" />
+				</TableRow>
+				<View android:layout_height="2dip" android:background="#FF909090" />
+				<TableRow>
+					<TextView android:text="Networks found"
+						android:layout_column="1" android:padding="3dip" />
+					<TextView android:text="(0 detected)" android:gravity="right"
+						android:padding="3dip" android:id="@+wifi/number" />
+				</TableRow>
+				<View android:layout_height="1dip" android:background="#FF909090" />
+				<TableRow>
+					<TextView android:text="SSID" android:layout_column="1"
+						android:padding="3dip" />
+					<TextView android:text="cap" android:gravity="right"
+						android:padding="3dip" />
+					<TextView android:text="level (dBm)" android:gravity="right"
+						android:padding="3dip" />
+				</TableRow>
+				<View android:layout_height="1dip" android:background="#FF909090" />
+				<TableRow>
+					<TextView android:text="" android:layout_column="1"
+						android:padding="3dip" android:id="@+wifi/ssids" />
+					<TextView android:text="" android:gravity="right"
+						android:padding="3dip" android:id="@+wifi/caps" />
+					<TextView android:text="" android:gravity="right"
+						android:padding="3dip" android:id="@+wifi/levels" />
+				</TableRow>
+			</TableLayout>
+			<TableLayout android:id="@+id/locationlayout"
+				android:layout_width="fill_parent" android:layout_height="fill_parent"
+				android:stretchColumns="1">
+				<TableRow>
+					<TextView android:text="Latitude" android:layout_column="1"
+						android:padding="3dip" />
+					<TextView android:text="0" android:gravity="right"
+						android:padding="3dip" android:id="@+location/lat" />
+				</TableRow>
+				<TableRow>
+					<TextView android:text="Longitude" android:layout_column="1"
+						android:padding="3dip" />
+					<TextView android:text="0" android:gravity="right"
+						android:padding="3dip" android:id="@+location/lon" />
+				</TableRow>
+				<TableRow>
+					<TextView android:text="Accuracy" android:layout_column="1"
+						android:padding="3dip" />
+					<TextView android:text="0" android:gravity="right"
+						android:padding="3dip" android:id="@+location/acc" />
+				</TableRow>
+				<TableRow>
+					<TextView android:text="Altitude" android:layout_column="1"
+						android:padding="3dip" />
+					<TextView android:text="0" android:gravity="right"
+						android:padding="3dip" android:id="@+location/alt" />
+				</TableRow>
+				<TableRow>
+					<TextView android:text="Bearing" android:layout_column="1"
+						android:padding="3dip" />
+					<TextView android:text="0" android:gravity="right"
+						android:padding="3dip" android:id="@+location/bea" />
+				</TableRow>
+				<TableRow>
+					<TextView android:text="Speed" android:layout_column="1"
+						android:padding="3dip" />
+					<TextView android:text="0" android:gravity="right"
+						android:padding="3dip" android:id="@+location/spe" />
+				</TableRow>
+				<TableRow>
+                    <TextView android:text="Provider" android:layout_column="1"
+                        android:padding="3dip" />
+                    <TextView android:text="0" android:gravity="right"
+                        android:padding="3dip" android:id="@+location/pro" />
+                </TableRow>
+			</TableLayout>
+			<TableLayout android:id="@+id/batterylayout"
+                android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView android:text="Battery Level" android:layout_column="1"
+                        android:padding="3dip" />
+                    <TextView android:text="0" android:gravity="right"
+                        android:padding="3dip" android:id="@+battery/level" />
+                </TableRow>
+            </TableLayout>
+		</FrameLayout>
+	</LinearLayout>
+</TabHost>

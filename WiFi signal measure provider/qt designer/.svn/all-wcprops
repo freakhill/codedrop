@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wsmp/!svn/ver/35/trunk/WiFi%20signal%20measure%20provider/qt%20designer
+END
+copy.bat
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wsmp/!svn/ver/4/trunk/WiFi%20signal%20measure%20provider/qt%20designer/copy.bat
+END
+wsmp.ui
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wsmp/!svn/ver/35/trunk/WiFi%20signal%20measure%20provider/qt%20designer/wsmp.ui
+END
+test.py
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/wsmp/!svn/ver/4/trunk/WiFi%20signal%20measure%20provider/qt%20designer/test.py
+END
+pygen.bat
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wsmp/!svn/ver/4/trunk/WiFi%20signal%20measure%20provider/qt%20designer/pygen.bat
+END
+wsmp.py
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wsmp/!svn/ver/35/trunk/WiFi%20signal%20measure%20provider/qt%20designer/wsmp.py
+END

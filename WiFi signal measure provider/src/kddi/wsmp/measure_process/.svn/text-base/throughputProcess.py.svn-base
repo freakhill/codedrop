@@ -1,0 +1,136 @@
+'''
+Created on 2009/11/05
+
+@author: jgall
+'''
+from fsm import FSM, transitions
+import time
+import exceptions
+
+import subprocess
+
+class Process(FSM):
+    '''
+    classdocs
+    '''
+    iperf_path = ''
+    server_ip = ''
+    server_port = ''
+    
+    iperf = Nones
+    iperf_launch_time = 0
+    
+    def __init__(self, *p):
+        FSM.__init__(self, *p) 
+
+    ##########################################################################
+    def start(self):
+        self.run(self.stopped)
+        
+    @transitions(CONTINUE='started',
+                 START='error',
+                 STOP='stopping',
+                 SHUTDOWN='shutdown')
+    def started(self, order):
+        # Take a measure
+        self.iperf.poll()
+        
+        if self.iperf.returncode != None:
+            self.iperf = self.launch_iperf()
+            self.iperf_launch_time = time.time()
+        # Parse iperf's stdout
+        line = self.iperf.stdout.readline()
+        if len(line) < 2:
+            return
+        line = line[0:-1]
+        # determine if it's a iperf lauching header line
+        # or a content line
+        if line[0] != '[' or line[-1] != 'c':
+            return()
+        # now we put the content on the line in our queue (kbps)
+        # along with the time ...evaluated... time of measurement
+        s = line.split(' ')
+        s = filter(lambda x: len(x) != 0, s)
+        val = float(s[-2]) / 1000
+        t = float(s[-6].split('-')[-1]) + self.iperf_launch_time
+        self.out((t, val))
+    
+    ##########################################################################
+    @transitions(CONTINUE='stopped',
+                 START='starting',
+                 STOP='stopped',
+                 SHUTDOWN='shutdown')
+    def stopped(self, order):
+        # Huh... do nothing
+        pass
+    
+    ##########################################################################
+    @transitions(CONTINUE='started',
+                 START='error',
+                 STOP='stopping',
+                 SHUTDOWN='shutdown')
+    def starting(self, order):
+        # Launch the measure taking app
+        self.iperf_path = order.path
+        self.server_ip = order.ip
+        self.server_port = order.port
+        
+        self.launch_iperf = lambda : subprocess.Popen([self.iperf_path,
+                              '-c', self.server_ip,
+                              '-p', self.server_port,
+                              '-i', '1', '-f', 'k', '-t', '10'],
+                              stdout=subprocess.PIPE)
+        
+        class DummyPopen(object):
+            returncode = 0
+            class DummyStdout(object):
+                def readlines(self):
+                    return []
+            stdout = DummyStdout()
+            
+            def poll(self):
+                return True
+            
+            def terminate(self):
+                pass
+    
+        # Launch iperf for 60s of 1s tcp throughput benchmark
+        # shown in kbps
+        try:
+            self.iperf = self.launch_iperf()
+        except exceptions.WindowsError:
+            self.iperf = DummyPopen()
+            
+        self.iperf_launch_time = time.time()
+    
+    ##########################################################################
+    @transitions(CONTINUE='stopped',
+                 START='starting',
+                 STOP='stopped',
+                 SHUTDOWN='shutdown')
+    def stopping(self, order):
+        # Close the measure taking app
+        if self.iperf:
+            self.iperf.poll()
+            if self.iperf.returncode == None:
+                self.iperf.terminate()
+    
+    ##########################################################################
+    @transitions(CONTINUE='error',
+                 START='error',
+                 STOP='error',
+                 SHUTDOWN='shutdown')
+    def error(self, order):
+        # Send a bunch of WEFAILED as output
+        pass
+    
+    ##########################################################################
+    @transitions(CONTINUE='shutdown',
+                 START='shutdown',
+                 STOP='shutdown',
+                 SHUTDOWN='shutdown')
+    def shutdown(self, order):
+        import sys
+        self.stopping(None)
+        sys.exit(0)
+    

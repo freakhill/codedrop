@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/wsmp/!svn/ver/88/trunk/ASMP%20data%20merger/example_data
+END
+GPS.csv
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/wsmp/!svn/ver/72/trunk/ASMP%20data%20merger/example_data/GPS.csv
+END
+GPS lat lon fused.csv
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/wsmp/!svn/ver/88/trunk/ASMP%20data%20merger/example_data/GPS%20lat%20lon%20fused.csv
+END
+gps_cdma.csv
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/wsmp/!svn/ver/72/trunk/ASMP%20data%20merger/example_data/gps_cdma.csv
+END
+WiFi.csv
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/wsmp/!svn/ver/72/trunk/ASMP%20data%20merger/example_data/WiFi.csv
+END
+gps_cdma2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wsmp/!svn/ver/86/trunk/ASMP%20data%20merger/example_data/gps_cdma2.csv
+END
+merge.csv
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wsmp/!svn/ver/72/trunk/ASMP%20data%20merger/example_data/merge.csv
+END
+CDMA.csv
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/wsmp/!svn/ver/72/trunk/ASMP%20data%20merger/example_data/CDMA.csv
+END

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wsmp/!svn/ver/137/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp
+END
+WiFiSignalMeasureProvider.py
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/wsmp/!svn/ver/137/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp/WiFiSignalMeasureProvider.py
+END
+gps.py
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wsmp/!svn/ver/137/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp/gps.py
+END
+matplotlibwidget.py
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/wsmp/!svn/ver/137/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp/matplotlibwidget.py
+END
+wsmp.ini
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wsmp/!svn/ver/37/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp/wsmp.ini
+END
+wifi.py
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wsmp/!svn/ver/137/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp/wifi.py
+END
+rawgui.py
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wsmp/!svn/ver/35/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp/rawgui.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wsmp/!svn/ver/4/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp/__init__.py
+END
+measures.py
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/wsmp/!svn/ver/137/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp/measures.py
+END
+gui.py
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wsmp/!svn/ver/137/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp/gui.py
+END
+db.py
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/wsmp/!svn/ver/137/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp/db.py
+END

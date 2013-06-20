@@ -1,0 +1,33 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 19
+/svn/wsmp/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/wsmp/!svn/ver/142/trunk/Android%20Signal%20Measure%20Provider
+END
+default.properties
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wsmp/!svn/ver/126/trunk/Android%20Signal%20Measure%20Provider/default.properties
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wsmp/!svn/ver/42/trunk/Android%20Signal%20Measure%20Provider/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/wsmp/!svn/ver/54/trunk/Android%20Signal%20Measure%20Provider/.project
+END
+AndroidManifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wsmp/!svn/ver/126/trunk/Android%20Signal%20Measure%20Provider/AndroidManifest.xml
+END

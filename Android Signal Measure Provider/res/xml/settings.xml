@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orderingFromXml="true">
+	<PreferenceCategory android:title="@string/settings_record">
+		<CheckBoxPreference android:key="record_cdma"
+			android:title="@string/settings_cdma_recording" android:defaultValue="true"></CheckBoxPreference>
+		<CheckBoxPreference android:key="record_wifi"
+			android:title="@string/settings_wifi_recording" android:defaultValue="true"></CheckBoxPreference>
+		<CheckBoxPreference android:key="record_location"
+			android:title="@string/settings_location_recording" android:defaultValue="true"></CheckBoxPreference>
+		<CheckBoxPreference android:key="record_battery"
+            android:title="@string/settings_battery_recording" android:defaultValue="true"></CheckBoxPreference>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/settings_period">
+		<ListPreference android:key="period_cdma"
+			android:title="@string/settings_cdma_period" android:dialogTitle="@string/settings_cdma_period"
+			android:entries="@array/periods" android:entryValues="@array/periods_value"></ListPreference>
+		<ListPreference android:key="period_wifi"
+			android:title="@string/settings_wifi_period" android:dialogTitle="@string/settings_wifi_period"
+			android:entries="@array/periods" android:entryValues="@array/periods_value"></ListPreference>
+		<ListPreference android:key="period_location"
+            android:title="@string/settings_location_period" android:dialogTitle="@string/settings_location_period"
+            android:entries="@array/periods" android:entryValues="@array/periods_value"></ListPreference>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/settings_location_provider">
+        <ListPreference android:key="provider_location"
+            android:title="@string/settings_location_provider" android:dialogTitle="@string/settings_location_provider"
+            android:entries="@array/location_providers" android:entryValues="@array/location_providers_value"></ListPreference>
+    </PreferenceCategory>
+	<PreferenceCategory android:title="@string/settings_visualize">
+		<ListPreference android:entries="@array/periods"
+			android:key="visualize_spotperiod" android:title="@string/settings_spotperiod_visualize"
+			android:entryValues="@array/periods_value"></ListPreference>
+		<ListPreference android:entries="@array/max_spot_number"
+			android:key="visualize_maxspots" android:title="@string/settings_maxspots_visualize"
+			android:entryValues="@array/max_spot_number_value"></ListPreference>
+		<ListPreference android:entries="@array/alpha"
+			android:key="visualize_levelalpha" android:title="@string/settings_levelalpha_visualize"
+			android:entryValues="@array/alpha_value"></ListPreference>
+		<ListPreference android:entries="@array/alpha"
+			android:key="visualize_spotalpha" android:title="@string/settings_spotalpha_visualize"
+			android:entryValues="@array/alpha_value"></ListPreference>
+		<ListPreference android:entries="@array/cid_text_size"
+			android:key="visualize_cidtextsize" android:title="@string/settings_cidtextsize_visualize"
+			android:entryValues="@array/cid_text_size_value"></ListPreference>
+		<ListPreference android:entries="@array/min_med_max_fig_text_size"
+			android:key="visualize_minmedmaxtextsize" android:title="@string/settings_minmedmaxtextsize_visualize"
+			android:entryValues="@array/min_med_max_fig_text_size_value"></ListPreference>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/settings_format">
+		<ListPreference android:entries="@array/recording_formats"
+			android:entryValues="@array/recording_formats" android:title="@string/settings_cdma_format"
+			android:key="format_cdma"></ListPreference>
+		<ListPreference android:entries="@array/recording_formats"
+			android:entryValues="@array/recording_formats" android:key="format_wifi"
+			android:title="@string/settings_wifi_format"></ListPreference>
+		<ListPreference android:entries="@array/recording_formats"
+			android:entryValues="@array/recording_formats" android:key="format_location"
+			android:title="@string/settings_location_format"></ListPreference>
+	</PreferenceCategory>
+</PreferenceScreen>

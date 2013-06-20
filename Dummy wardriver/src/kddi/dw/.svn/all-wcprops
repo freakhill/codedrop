@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/wsmp/!svn/ver/140/trunk/Dummy%20wardriver/src/kddi/dw
+END
+City.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/wsmp/!svn/ver/135/trunk/Dummy%20wardriver/src/kddi/dw/City.py
+END
+test
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/wsmp/!svn/ver/98/trunk/Dummy%20wardriver/src/kddi/dw/test
+END
+Longitude.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wsmp/!svn/ver/135/trunk/Dummy%20wardriver/src/kddi/dw/Longitude.py
+END
+Latitude.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/wsmp/!svn/ver/135/trunk/Dummy%20wardriver/src/kddi/dw/Latitude.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/wsmp/!svn/ver/140/trunk/Dummy%20wardriver/src/kddi/dw/__init__.py
+END
+DummyWardriver.py
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wsmp/!svn/ver/135/trunk/Dummy%20wardriver/src/kddi/dw/DummyWardriver.py
+END
+Antenna.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/wsmp/!svn/ver/135/trunk/Dummy%20wardriver/src/kddi/dw/Antenna.py
+END
+PathFinder.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/wsmp/!svn/ver/135/trunk/Dummy%20wardriver/src/kddi/dw/PathFinder.py
+END
+Position.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/wsmp/!svn/ver/135/trunk/Dummy%20wardriver/src/kddi/dw/Position.py
+END
+Walker.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/wsmp/!svn/ver/135/trunk/Dummy%20wardriver/src/kddi/dw/Walker.py
+END

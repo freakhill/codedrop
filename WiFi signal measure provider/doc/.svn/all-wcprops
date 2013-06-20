@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/wsmp/!svn/ver/4/trunk/WiFi%20signal%20measure%20provider/doc
+END
+create the database.txt
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/wsmp/!svn/ver/4/trunk/WiFi%20signal%20measure%20provider/doc/create%20the%20database.txt
+END
+database schema.txt
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wsmp/!svn/ver/4/trunk/WiFi%20signal%20measure%20provider/doc/database%20schema.txt
+END
+patch_sqlalchemy.txt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wsmp/!svn/ver/4/trunk/WiFi%20signal%20measure%20provider/doc/patch_sqlalchemy.txt
+END

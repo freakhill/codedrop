@@ -1,0 +1,125 @@
+package jp.kddilabs.tsm.android.smp.services;
+
+import jp.kddilabs.tsm.android.smp.measures.Battery_Measure;
+import jp.kddilabs.tsm.android.smp.providers.Battery_CSV_Provider;
+import android.content.BroadcastReceiver;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.database.ContentObserver;
+import android.os.BatteryManager;
+import android.os.Handler;
+import android.os.IBinder;
+import android.os.RemoteException;
+import android.util.Log;
+
+public class Battery_Service extends AsmpService<Battery_Measure> {
+
+	public final static String NEW_DATA = Battery_Service.class.getName()
+			+ ".NEW_DATA";
+	public final static String READ = Battery_Service.class.getName() + ".READ";
+	public final static String CONFIG = Battery_Service.class.getName()
+			+ ".CONFIG";
+
+	private final Battery_ServiceInterface.Stub reader_binder = new Battery_ServiceInterface.Stub() {
+		@Override
+		public Battery_Measure getLastValue() throws RemoteException {
+			return last_measure;
+		}
+	};
+
+	private final Battery_ServiceConfigInterface.Stub config_binder = new Battery_ServiceConfigInterface.Stub() {
+
+		private boolean csv_recording = false;
+
+		@Override
+		public void startRecording(String format) {
+			Log.d(DEBUG_TAG, "Trying to start the content recorder");
+			if (format.equals(Battery_CSV_Provider.RECORDING_FORMAT)) {
+				ContentObserver observer = new ContentObserver(new Handler()) {
+					@Override
+					public void onChange(boolean moo) {
+					}
+				};
+
+				ContentResolver r = getContentResolver();
+				r.registerContentObserver(Battery_CSV_Provider.CONTENT_URI,
+						false, observer);
+				recorders.put(format, observer);
+				sendBroadcast(new Intent()
+						.setAction(Battery_CSV_Provider.START_RECORDING));
+				csv_recording = true;
+			}
+		}
+
+		@Override
+		public void stopRecording(String format) {
+			Log.d(DEBUG_TAG, "Trying to stop the content recorder");
+			if (format.equals(Battery_CSV_Provider.RECORDING_FORMAT)) {
+				ContentResolver r = getContentResolver();
+				ContentObserver v = recorders.get(format);
+				if (v != null) {
+					r.unregisterContentObserver(v);
+					recorders.remove(format);
+				}
+				sendBroadcast(new Intent()
+						.setAction(Battery_CSV_Provider.STOP_RECORDING));
+				csv_recording = false;
+			}
+		}
+
+		@Override
+		public boolean isRecording(String format) throws RemoteException {
+			if (format.equals(Battery_CSV_Provider.RECORDING_FORMAT)) {
+				return csv_recording;
+			}
+			return false;
+		}
+	};
+
+	@Override
+	public void onCreate() {
+		super.init();
+		last_measure = new Battery_Measure();
+
+		Intent stickyBattery = getApplicationContext().registerReceiver(
+				new BroadcastReceiver() {
+					@Override
+					public void onReceive(Context context, Intent intent) {
+						int level = intent.getIntExtra(
+								BatteryManager.EXTRA_LEVEL, 2);
+						int scale = intent.getIntExtra(
+								BatteryManager.EXTRA_SCALE, -1);
+						if (scale != 0) {
+							last_measure.level = level / scale;
+						} else {
+							last_measure.level = -1;
+						}
+						sendRefreshNotice(NEW_DATA);
+					}
+				}, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+
+		int level = stickyBattery.getIntExtra(BatteryManager.EXTRA_LEVEL, 2);
+		int scale = stickyBattery.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+		if (scale != 0) {
+			last_measure.level = level / scale;
+		} else {
+			last_measure.level = -1;
+		}
+	}
+
+	@Override
+	public final IBinder onBind(Intent intent) {
+		String action = intent.getAction();
+		if (action.equals(READ)) {
+			return reader_binder;
+		}
+		if (action.equals(CONFIG)) {
+			return config_binder;
+		}
+		Log.w(DEBUG_TAG, "Strange intent sent to Battery_Service : " + action);
+		return null;
+	}
+
+}

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/wsmp/!svn/ver/134/trunk/ASMP%20data%20merger/src/kddi/asmp/csv
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wsmp/!svn/ver/87/trunk/ASMP%20data%20merger/src/kddi/asmp/csv/__init__.py
+END
+Join.py
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wsmp/!svn/ver/134/trunk/ASMP%20data%20merger/src/kddi/asmp/csv/Join.py
+END
+Restrict.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wsmp/!svn/ver/134/trunk/ASMP%20data%20merger/src/kddi/asmp/csv/Restrict.py
+END
+Project.py
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wsmp/!svn/ver/120/trunk/ASMP%20data%20merger/src/kddi/asmp/csv/Project.py
+END

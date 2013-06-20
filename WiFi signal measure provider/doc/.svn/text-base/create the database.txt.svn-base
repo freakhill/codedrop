@@ -1,0 +1,65 @@
+1. Install the MySQL server on your server
+Please, note the listening Port (default is 3306)
+Don't forget your admin password
+2. Launch the command line client with your admin password
+Enter the following commands
+
+CREATE DATABASE IF NOT EXISTS wsmdb;
+
+USE wsmdb;
+
+CREATE TABLE IF NOT EXISTS AccessPoint
+(
+    id SERIAL,
+    model VARCHAR(128) CHARACTER SET utf8,
+    sn VARCHAR(128) CHARACTER SET utf8,
+    ssid VARCHAR(17) CHARACTER SET utf8,
+    PRIMARY KEY (model,sn,ssid)
+);
+
+CREATE TABLE IF NOT EXISTS ClientInterface
+(
+    id SERIAL,
+    model VARCHAR(128) CHARACTER SET utf8,
+    mac_address VARCHAR(128) CHARACTER SET utf8,
+    PRIMARY KEY (model, mac_address)
+);
+
+CREATE TABLE IF NOT EXISTS Position
+(
+    id SERIAL,
+    latitude DOUBLE,
+    longitude DOUBLE,
+    height DOUBLE,
+    PRIMARY KEY (latitude, longitude, height)
+);
+
+CREATE TABLE IF NOT EXISTS Measures
+(
+    id SERIAL,
+    ap_id BIGINT UNSIGNED,
+    ap_pos BIGINT UNSIGNED,
+    client_id BIGINT UNSIGNED,
+    client_pos BIGINT UNSIGNED,
+    server_pos BIGINT UNSIGNED,
+    date TIMESTAMP,
+    date_ms MEDIUMINT UNSIGNED,
+    exp_tag VARCHAR(128) CHARACTER SET utf8,
+    cqi DOUBLE, # Check this
+    cinr DOUBLE, # Check this
+    rssi TINYINT UNSIGNED,
+    delay DOUBLE, # Check this
+    throughput DOUBLE, # Check this
+    remarks TEXT CHARACTER SET utf8,
+    PRIMARY KEY (ap_id, ap_pos, client_id, client_pos, server_pos, date, date_ms, exp_tag),
+    FOREIGN KEY (ap_id) REFERENCES AccessPoint (id)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (client_id) REFERENCES ClientInterface(id)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (ap_pos) REFERENCES Position (id)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (client_pos) REFERENCES Position (id)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (server_pos) REFERENCES Position (id)
+        ON DELETE CASCADE ON UPDATE CASCADE
+);

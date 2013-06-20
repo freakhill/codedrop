@@ -1,0 +1,7 @@
+package jp.kddilabs.tsm.android.smp.services;
+
+import jp.kddilabs.tsm.android.smp.measures.GPS_Measure;
+
+interface GPS_ServiceInterface {
+    GPS_Measure getLastValue();
+}

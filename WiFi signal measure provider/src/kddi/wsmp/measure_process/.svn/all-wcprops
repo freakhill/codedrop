@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/wsmp/!svn/ver/137/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp/measure_process
+END
+throughputProcess.py
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/wsmp/!svn/ver/137/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp/measure_process/throughputProcess.py
+END
+dummy.py
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/wsmp/!svn/ver/137/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp/measure_process/dummy.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/wsmp/!svn/ver/17/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp/measure_process/__init__.py
+END
+rssiProcess.py
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/wsmp/!svn/ver/137/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp/measure_process/rssiProcess.py
+END
+fsm.py
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/wsmp/!svn/ver/21/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp/measure_process/fsm.py
+END
+messages.py
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/wsmp/!svn/ver/137/trunk/WiFi%20signal%20measure%20provider/src/kddi/wsmp/measure_process/messages.py
+END

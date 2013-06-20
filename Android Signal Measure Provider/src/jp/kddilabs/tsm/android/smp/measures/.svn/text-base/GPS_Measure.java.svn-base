@@ -1,0 +1,48 @@
+package jp.kddilabs.tsm.android.smp.measures;
+
+import android.location.Location;
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class GPS_Measure extends AsmpMeasure implements Parcelable {
+
+	// blaaablaaablaaa
+	public static final Parcelable.Creator<GPS_Measure> CREATOR = new Parcelable.Creator<GPS_Measure>() {
+
+		@Override
+		public GPS_Measure createFromParcel(Parcel source) {
+			// TODO Auto-generated method stub
+			return new GPS_Measure(source);
+		}
+
+		@Override
+		public GPS_Measure[] newArray(int size) {
+			// TODO Auto-generated method stub
+			return new GPS_Measure[size];
+		}
+	};
+
+	public Location location;
+
+	public GPS_Measure() {
+
+	}
+
+	public GPS_Measure(Parcel source) {
+		super.readFromParcel(source);
+		location = (Location) source.readParcelable(null);
+	}
+
+	@Override
+	public int describeContents() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void writeToParcel(Parcel dest, int flags) {
+		super.writeToParcel(dest, flags);
+		dest.writeParcelable(location, 0);
+	}
+
+}

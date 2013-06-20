@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>WiFi Signal Measure Provider</string>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_6">
+    <item>
+     <widget class="QTabWidget" name="mainTab">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="toolTip">
+       <string>Signal</string>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="signalTab">
+       <attribute name="title">
+        <string>Signal</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="measureHLayout">
+          <item>
+           <layout class="QGridLayout" name="measureGrid" rowstretch="0,0,0,0" columnstretch="0,0">
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QFrame" name="cqiFrame">
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Sunken</enum>
+              </property>
+              <layout class="QVBoxLayout" name="cqiLayout">
+               <item>
+                <widget class="QLabel" name="cqiLabel">
+                 <property name="text">
+                  <string>CQI</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="MatplotlibWidget" name="cqiPlot"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QFrame" name="delayFrame">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Sunken</enum>
+              </property>
+              <layout class="QVBoxLayout" name="delayLayout">
+               <item>
+                <widget class="QLabel" name="delayLabel">
+                 <property name="text">
+                  <string>DELAY</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="MatplotlibWidget" name="delayPlot"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QFrame" name="throughputFrame">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Sunken</enum>
+              </property>
+              <layout class="QVBoxLayout" name="throughputLayout">
+               <item>
+                <widget class="QLabel" name="throughputLabel">
+                 <property name="text">
+                  <string>THROUGHPUT</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="MatplotlibWidget" name="throughputPlot"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QFrame" name="rssiFrame">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Sunken</enum>
+              </property>
+              <layout class="QVBoxLayout" name="rssiLayout">
+               <item>
+                <widget class="QLabel" name="rssiLabel">
+                 <property name="text">
+                  <string>RSSI</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="MatplotlibWidget" name="rssiPlot"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QFrame" name="cinrFrame">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Sunken</enum>
+              </property>
+              <layout class="QVBoxLayout" name="cinrLayout">
+               <item>
+                <widget class="QLabel" name="cinrLabel">
+                 <property name="text">
+                  <string>CINR</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="MatplotlibWidget" name="cinrPlot"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QFrame" name="otherDataFrame">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Sunken</enum>
+              </property>
+              <layout class="QVBoxLayout" name="otherDataLayout">
+               <item>
+                <widget class="QTextBrowser" name="otherDataText"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="tagAndRemarksLayout">
+            <item>
+             <widget class="QLabel" name="tagLabel">
+              <property name="text">
+               <string>EXPERIMENT NAME TAG</string>
+              </property>
+              <property name="buddy">
+               <cstring>tagLineEdit</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="tagLineEdit"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="remarksLabel">
+              <property name="text">
+               <string>REMARKS</string>
+              </property>
+              <property name="buddy">
+               <cstring>remarksTextEdit</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextEdit" name="remarksTextEdit"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="sendMeasureHLayout" stretch="0,0">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinimumSize</enum>
+          </property>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="sendMeasureButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Send Measure</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <property name="autoDefault">
+             <bool>true</bool>
+            </property>
+            <property name="default">
+             <bool>false</bool>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="apcTab">
+       <attribute name="title">
+        <string>AP/Client</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QGroupBox" name="apcClientGroupBox">
+          <property name="title">
+           <string>Client</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <widget class="QLabel" name="apcClientInterfaceLabel">
+             <property name="text">
+              <string>Interface</string>
+             </property>
+             <property name="buddy">
+              <cstring>apcClientInterfaceListView</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QScrollArea" name="apcClientInterfaceScrollArea">
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="apcClientInterfaceScrollAreaWidgetContents">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>960</width>
+                <height>116</height>
+               </rect>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <item>
+                <widget class="QListView" name="apcClientInterfaceListView"/>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <layout class="QFormLayout" name="apcClientSsidFormLayout">
+             <item row="0" column="0">
+              <widget class="QLabel" name="apcClientSsidLabel">
+               <property name="text">
+                <string>Current connection SSID</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="apcClientSsidLineEdit">
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="apcAccessPointGroupBox">
+          <property name="title">
+           <string>Access Point</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <item>
+            <layout class="QFormLayout" name="apcAccessPointMSNFormLayout">
+             <item row="0" column="0">
+              <widget class="QLabel" name="apcAccessPointModelLabel">
+               <property name="text">
+                <string>Model</string>
+               </property>
+               <property name="buddy">
+                <cstring>apcAccessPointModelLineEdit</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="apcAccessPointModelLineEdit"/>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="apcAccessPointSerialNumberLabel">
+               <property name="text">
+                <string>Serial Number</string>
+               </property>
+               <property name="buddy">
+                <cstring>apcAccessPointSerialNumberLineEdit</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="apcAccessPointSerialNumberLineEdit"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="apcAccessPointPositionGroupBox">
+             <property name="title">
+              <string>Position</string>
+             </property>
+             <layout class="QFormLayout" name="formLayout_4">
+              <property name="fieldGrowthPolicy">
+               <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="apcAccessPointPositionLatitudeLabel">
+                <property name="text">
+                 <string>Latitude</string>
+                </property>
+                <property name="buddy">
+                 <cstring>apcAccessPointPositionLatitudeLineEdit</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="apcAccessPointPositionLatitudeLineEdit"/>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="apcAccessPointPositionLongitude">
+                <property name="text">
+                 <string>Longitude</string>
+                </property>
+                <property name="buddy">
+                 <cstring>apcAccessPointLongitudeLineEdit</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="apcAccessPointLongitudeLineEdit"/>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="apcAccessPointPositionHeigth">
+                <property name="text">
+                 <string>Heigth</string>
+                </property>
+                <property name="buddy">
+                 <cstring>apcAccessPointPositionHeigthLineEdit</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="apcAccessPointPositionHeigthLineEdit"/>
+              </item>
+              <item row="3" column="1">
+               <layout class="QHBoxLayout" name="getCurrentGpsPositionAsAccessPointButtonSpacerLayout">
+                <item>
+                 <spacer name="apcAccessPointButtonSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="apcAccessPointPositionButton">
+                  <property name="text">
+                   <string>GET CURRENT GPS POSITION AS ACCESS POINT POSITION</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="apcServerGroupBox">
+          <property name="title">
+           <string>Measure Server</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_14">
+           <item>
+            <layout class="QFormLayout" name="formLayout_2">
+             <property name="fieldGrowthPolicy">
+              <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+             </property>
+             <item row="2" column="1">
+              <layout class="QHBoxLayout" name="apcServerParamsButtonLayout">
+               <item>
+                <spacer name="apcServerParamsButtonSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="apcServerParamsButton">
+                 <property name="text">
+                  <string>USE THESE PARAMETERS</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="apcServerAddressLineEdit"/>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="apcServerPortLineEdit"/>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="apcServerAddressLabel">
+               <property name="text">
+                <string>Address</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="apcServerPortLabel">
+               <property name="text">
+                <string>Port</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="apcServerPositionGroupBox">
+          <property name="title">
+           <string>Position</string>
+          </property>
+          <layout class="QFormLayout" name="formLayout_5">
+           <property name="fieldGrowthPolicy">
+            <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="apcServerPositionLatitudeLabel">
+             <property name="text">
+              <string>Latitude</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="apcServerPositionLatitudeLineEdit"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="apcServerPositionLongitudeLabel">
+             <property name="text">
+              <string>Longitude</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="apcServerPositionLongitudeLineEdit"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="apcServerPositionHeightLabel">
+             <property name="text">
+              <string>Height</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="apcServerPositionHeightLineEdit"/>
+           </item>
+           <item row="3" column="1">
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <spacer name="apcServerButtonSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="apcServerPositionButton">
+               <property name="text">
+                <string>GET CURRENT GPS POSITION AS MEASURE SERVER POSITION</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="apcVerticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="dbTab">
+       <attribute name="title">
+        <string>Database</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QGroupBox" name="dbSetupGroupBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>Setup</string>
+          </property>
+          <layout class="QFormLayout" name="formLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="dbAddressLabel">
+             <property name="text">
+              <string>Address</string>
+             </property>
+             <property name="buddy">
+              <cstring>dbAddressLineEdit</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="dbAddressLineEdit"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="dbLoginLabel">
+             <property name="text">
+              <string>Login</string>
+             </property>
+             <property name="buddy">
+              <cstring>dbLoginLineEdit</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="dbLoginLineEdit"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="dbPasswordLabel">
+             <property name="text">
+              <string>Password</string>
+             </property>
+             <property name="buddy">
+              <cstring>dbPasswordLineEdit</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="dbPasswordLineEdit">
+             <property name="echoMode">
+              <enum>QLineEdit::Password</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="dbConnectButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>CONNECT</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="dbVSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="bluetoothTab">
+       <attribute name="title">
+        <string>Bluetooth (GPS)</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_12">
+        <item>
+         <widget class="QGroupBox" name="bluetoothDeviceGroupBox">
+          <property name="title">
+           <string>Device</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_13">
+           <item>
+            <layout class="QFormLayout" name="bluetoothDeviceCurrentlyUsedFormLayout">
+             <item row="0" column="0">
+              <widget class="QLabel" name="bluetoothDeviceCurrentlyUsedLabel">
+               <property name="text">
+                <string>Currently used </string>
+               </property>
+               <property name="buddy">
+                <cstring>bluetoothDeviceCurrentlyUsedLineEdit</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="bluetoothDeviceCurrentlyUsedLineEdit">
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QScrollArea" name="bluetoothDeviceScrollArea">
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="scrollAreaWidgetContents">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>960</width>
+                <height>210</height>
+               </rect>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <item>
+                <widget class="QListView" name="bluetoothDeviceListView"/>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="bluetoothDeviceScanConnectLayout">
+             <item>
+              <widget class="QPushButton" name="bluetoothDeviceScanButton">
+               <property name="text">
+                <string>SCAN</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="bluetoothDeviceScanConnectSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="bluetoothDeviceConnectButton">
+               <property name="text">
+                <string>CONNECT</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="bluetoothParsedGroupBox">
+          <property name="title">
+           <string>Parsed GPS values</string>
+          </property>
+          <layout class="QFormLayout" name="formLayout_3">
+           <item row="2" column="0">
+            <widget class="QLabel" name="bluetoothParsedHeightLabel">
+             <property name="text">
+              <string>Height</string>
+             </property>
+             <property name="buddy">
+              <cstring>bluetoothParsedHeightLineEdit</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="bluetoothParsedHeightLineEdit">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="bluetoothParsedLatitudeLineEdit">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="bluetoothParsedLongitudeLineEdit">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="bluetoothParsedLongitudeLabel">
+             <property name="text">
+              <string>Longitude</string>
+             </property>
+             <property name="buddy">
+              <cstring>bluetoothParsedLongitudeLineEdit</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="bluetoothParsedLatitudeLabel">
+             <property name="text">
+              <string>Latitude</string>
+             </property>
+             <property name="buddy">
+              <cstring>bluetoothParsedLatitudeLineEdit</cstring>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="bluetoothVSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="langTab">
+       <attribute name="title">
+        <string>Language / 言語</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QPushButton" name="langEnglishButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>English</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="langJapaneseButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>日本語</string>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MatplotlibWidget</class>
+   <extends>QWidget</extends>
+   <header>matplotlibwidget</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>dbAddressLineEdit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>dbConnectButton</receiver>
+   <slot>toggle()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>914</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>952</x>
+     <y>154</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dbLoginLineEdit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>dbConnectButton</receiver>
+   <slot>toggle()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>799</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>932</x>
+     <y>153</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dbPasswordLineEdit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>dbConnectButton</receiver>
+   <slot>toggle()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>533</x>
+     <y>124</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>925</x>
+     <y>155</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

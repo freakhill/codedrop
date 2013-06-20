@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="settings_spotperiod_visualize">Measure spot refresh period</string>
+	<string name="settings_minmedmaxtextsize_visualize">min/median/max text size</string>
+	<string name="settings_cidtextsize_visualize">CellID text size</string>
+	<string name="settings_spotalpha_visualize">Location spot transparency</string>
+	<string name="settings_levelalpha_visualize">Level bars transparency</string>
+	<string name="app_name">Android Signal Measure Provider</string>
+	<string name="settings_maxspots_visualize">Max number of spots</string>
+	<string name="settings_wifi_format">WiFi recording format</string>
+	<string name="settings_location_format">Location recording format</string>
+	<string name="settings_cdma_format">CDMA recording format</string>
+	<string name="settings_format">Recording format</string>
+	<string name="settings_visualize">Visualization options</string>
+	<string name="settings_wifi_period">Approx. WiFi period</string>
+	<string name="settings_cdma_period">Approx. CDMA period</string>
+	<string name="settings_period">Measure frequency</string>
+	<string name="settings_location_recording">Enable Location recording</string><string name="settings_battery_recording">Enable Battery recording</string>
+	<string name="settings_wifi_recording">Enable WiFi recording</string>
+	<string name="settings_cdma_recording">Enable CDMA recording</string>
+	<string name="settings_record">Recording</string>
+	<string-array name="periods">
+		<item>50ms</item>
+		<item>100ms</item>
+		<item>150ms</item>
+		<item>200ms</item>
+		<item>250ms</item>
+		<item>300ms</item>
+		<item>500ms</item>
+		<item>750ms</item>
+		<item>1s</item>
+		<item>2s</item>
+		<item>4s</item>
+		<item>6s</item>
+		<item>10s</item>
+		<item>15s</item>
+		<item>30s</item>
+	</string-array>
+	<string-array name="periods_value">
+		<item>50</item>
+		<item>100</item>
+		<item>150</item>
+		<item>200</item>
+		<item>250</item>
+		<item>300</item>
+		<item>500</item>
+		<item>750</item>
+		<item>1000</item>
+		<item>2000</item>
+		<item>4000</item>
+		<item>6000</item>
+		<item>10000</item>
+		<item>15000</item>
+		<item>30000</item>
+	</string-array>
+	<string-array name="recording_formats">
+		<item>CSV</item>
+
+	</string-array>
+	<string-array name="cid_text_size">
+		<item>Small</item>
+		<item>Normal</item>
+		<item>Large</item>
+	</string-array>
+	<string-array name="cid_text_size_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+	<string-array name="min_med_max_fig_text_size">
+		<item>small/small/small</item>
+		<item>small/small/Norm</item>
+		<item>small/small/LARGE</item>
+		<item>small/Norm/small</item>
+		<item>small/Norm/Norm</item>
+		<item>small/Norm/LARGE</item>
+		<item>small/LARGE/small</item>
+		<item>small/LARGE/Norm</item>
+		<item>small/LARGE/LARGE</item>
+		<item>Norm/small/small</item>
+		<item>Norm/small/Norm</item>
+		<item>Norm/small/LARGE</item>
+		<item>Norm/Norm/small</item>
+		<item>Norm/Norm/Norm</item>
+		<item>Norm/Norm/LARGE</item>
+		<item>Norm/LARGE/small</item>
+		<item>Norm/LARGE/Norm</item>
+		<item>Norm/LARGE/LARGE</item>
+		<item>LARGE/small/small</item>
+		<item>LARGE/small/Norm</item>
+		<item>LARGE/small/LARGE</item>
+		<item>LARGE/Norm/small</item>
+		<item>LARGE/Norm/Norm</item>
+		<item>LARGE/Norm/LARGE</item>
+		<item>LARGE/LARGE/small</item>
+		<item>LARGE/LARGE/Norm</item>
+		<item>LARGE/LARGE/LARGE</item>
+	</string-array>
+	<string-array name="min_med_max_fig_text_size_value">
+		<item>000</item>
+		<item>001</item>
+		<item>002</item>
+		<item>010</item>
+		<item>011</item>
+		<item>012</item>
+		<item>020</item>
+		<item>021</item>
+		<item>022</item>
+		<item>100</item>
+		<item>101</item>
+		<item>102</item>
+		<item>110</item>
+		<item>111</item>
+		<item>112</item>
+		<item>120</item>
+		<item>121</item>
+		<item>122</item>
+		<item>200</item>
+		<item>201</item>
+		<item>202</item>
+		<item>210</item>
+		<item>211</item>
+		<item>212</item>
+		<item>220</item>
+		<item>221</item>
+		<item>222</item>
+	</string-array>
+	<string-array name="max_spot_number">
+		<item>200</item>
+		<item>400</item>
+		<item>800</item>
+		<item>2k</item>
+		<item>4k</item>
+		<item>8k</item>
+		<item>20k</item>
+		<item>40k</item>
+		<item>80k</item>
+		<item>200k</item>
+		<item>1M</item>
+	</string-array>
+	<string-array name="max_spot_number_value">
+		<item>200</item>
+		<item>400</item>
+		<item>800</item>
+		<item>2000</item>
+		<item>4000</item>
+		<item>8000</item>
+		<item>20000</item>
+		<item>40000</item>
+		<item>80000</item>
+		<item>100000</item>
+		<item>1000000</item>
+	</string-array>
+	<string-array name="alpha">
+		<item>Transparent</item>
+		<item>10%</item>
+		<item>20%</item>
+		<item>30%</item>
+		<item>40%</item>
+		<item>50%</item>
+		<item>60%</item>
+		<item>80%</item>
+		<item>Opaque</item>
+	</string-array>
+	<string-array name="alpha_value">
+		<item>0</item>
+		<item>10</item>
+		<item>20</item>
+		<item>30</item>
+		<item>40</item>
+		<item>50</item>
+		<item>60</item>
+		<item>80</item>
+		<item>100</item>
+	</string-array>
+<string name="settings_location_period">Approx. Location period</string>
+<string name="settings_location_provider">Location provider</string>
+<string-array name="location_providers_value"><item>gps</item>
+<item>network</item>
+</string-array>
+<string-array name="location_providers"><item>GPS</item>
+<item>Network (WiFi&amp;CDMA)</item>
+</string-array>
+</resources>

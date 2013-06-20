@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="jp.kddilabs.tsm.android.smp" android:versionCode="1"
+	android:versionName="1.0">
+
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+
+	<application android:icon="@drawable/icon" android:label="@string/app_name"
+		android:theme="@android:style/Theme.NoTitleBar"
+		android:allowClearUserData="true" android:debuggable="true"
+		android:allowTaskReparenting="true" android:hasCode="true">
+
+		<!-- <uses-library android:name="com.google.android.maps" /> -->
+
+		<activity android:label="@string/app_name"
+			android:launchMode="singleTask" android:name="MainActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="SettingsActivity"></activity>
+		<!-- <activity android:name="VisualizeActivity"></activity> -->
+
+		<service android:label="Location data retrieve service"
+			android:name=".services.Location_Service"></service>
+		<service android:label="CDMA data retrieve service"
+			android:name=".services.CDMA_Service">
+		</service>
+		<service android:label="WiFi data retrieve service"
+			android:name=".services.WiFi_Service"></service>
+		<service android:name=".services.Battery_Service"
+			android:label="Battery data retrieve service"></service>
+
+		<provider android:label="Location data content provider"
+			android:authorities="jp.kddilabs.tsm.android.smp.providers.location"
+			android:name=".providers.Location_CSV_Provider"></provider>
+		<provider android:label="CDMA data content provider"
+			android:name=".providers.CDMA_CSV_Provider" android:authorities="jp.kddilabs.tsm.android.smp.providers.cdma"></provider>
+		<provider android:label="WiFi data content provider"
+			android:authorities="jp.kddilabs.tsm.android.smp.providers.wifi"
+			android:name=".providers.WiFi_CSV_Provider"></provider>
+		<provider android:name=".providers.Battery_CSV_Provider"
+			android:label="Battery data content provider" android:authorities="jp.kddilabs.tsm.android.smp.providers.battery"></provider>
+			
+	</application>
+	<uses-sdk android:minSdkVersion="7" />
+
+</manifest> 

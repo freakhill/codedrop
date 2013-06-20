@@ -1,0 +1,4 @@
+Lib/site-packages/sqlalchemy/dialects/mysql/base.py
+ligne 1949            
+            lc_alias = schema._get_table_key(table.name, table.schema)
+            -> lc_alias = sa_schema._get_table_key(table.name, table.schema)

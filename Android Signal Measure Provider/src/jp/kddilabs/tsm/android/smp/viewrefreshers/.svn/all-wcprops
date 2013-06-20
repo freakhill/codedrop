@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/wsmp/!svn/ver/133/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/viewrefreshers
+END
+WiFiViewRefresher.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/wsmp/!svn/ver/126/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/viewrefreshers/WiFiViewRefresher.java
+END
+ViewRefresher.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/wsmp/!svn/ver/81/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/viewrefreshers/ViewRefresher.java
+END
+AsmpViewRefresher.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/wsmp/!svn/ver/133/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/viewrefreshers/AsmpViewRefresher.java
+END
+CdmaViewRefresher.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/wsmp/!svn/ver/130/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/viewrefreshers/CdmaViewRefresher.java
+END
+GpsViewRefresher.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/wsmp/!svn/ver/126/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/viewrefreshers/GpsViewRefresher.java
+END
+BatteryViewRefresher.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/wsmp/!svn/ver/133/trunk/Android%20Signal%20Measure%20Provider/src/jp/kddilabs/tsm/android/smp/viewrefreshers/BatteryViewRefresher.java
+END

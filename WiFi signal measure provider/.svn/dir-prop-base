@@ -1,0 +1,10 @@
+K 10
+svn:ignore
+V 80
+*.project
+*.pydevproject
+.settings
+launch_iperf_server.bat
+start_iperf_serv.bat
+
+END
